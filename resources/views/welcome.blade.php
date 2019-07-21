@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/ag2329/mini-project-2">GitHub</a>
                 </div>
             </div>
         </div>
