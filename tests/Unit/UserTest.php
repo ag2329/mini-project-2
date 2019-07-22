@@ -88,4 +88,14 @@ class UserTest extends TestCase
         }
     }
 
+    public function testDeletecar(){
+        DB::table('cars')->where('year', '=', "2000")->delete();
+        $name = DB::table('cars')->where('year', '2000')->value('year');
+        if(!$name){
+            $this->assertTrue(true);
+
+        }
+
+    }
+
 }
