@@ -4,6 +4,7 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Support\Facades\DB;
 use App\User;
+use App\car;
 
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -105,6 +106,13 @@ class UserTest extends TestCase
             $this->assertTrue(true);
 
         }
+    }
+
+    public function testdataType(){
+        $user=car::find(1);
+        echo $user->year;
+        $this->assertIsInt($user->year);
+
     }
 
 }
