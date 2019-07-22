@@ -111,7 +111,20 @@ class UserTest extends TestCase
     public function testdataType(){
         $user=car::find(1);
         echo $user->year;
-        $this->assertIsInt($user->year);
+        $this->assertTrue(is_int($user->year));
+
+    }
+
+    public function testmakeType(){
+        $user=car::find(1);
+
+       $make= $user->make;
+
+        if (($make == "Honda") or ($make == "Toyota") or ($make == "Ford")){
+            $this->assertTrue(true);
+        }
+
+
 
     }
 
