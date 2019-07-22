@@ -32,4 +32,15 @@ class UserTest extends TestCase
         }
 
     }
+    public function testupdate(){
+        DB::table('users')->where('name',"anitika")->update(array(
+            'name'=>"Steve Smith"
+        ));
+        $name = DB::table('users')->where('name', "Steve Smith")->value('name');
+        echo $name;
+        if($name == "Steve Smith"){
+            $this->assertTrue(true);
+
+        }
+    }
 }
