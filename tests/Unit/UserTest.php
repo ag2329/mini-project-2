@@ -52,4 +52,13 @@ class UserTest extends TestCase
         }
 
     }
+
+    public function testcounts(){
+        $users = DB::table('users')->count();
+        echo "this is",$users;
+        if ($users == 50){
+            $this->assertTrue(true);
+
+        }
+    }
 }
