@@ -127,5 +127,11 @@ class UserTest extends TestCase
 
 
     }
+    public function testmodel(){
+        $user=car::find(1);
+
+        $make= $user->model;
+        $this->assertTrue(is_string($user->year));
+    }
 
 }
