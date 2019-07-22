@@ -76,5 +76,16 @@ class UserTest extends TestCase
         }
 
     }
+    public function testupdateCar(){
+        DB::table('cars')->where('year',"2019")->update(array(
+            'year'=>"2000"
+        ));
+        $name = DB::table('cars')->where('year', "2000")->value('year');
+
+        if($name == "2000"){
+            $this->assertTrue(true);
+
+        }
+    }
 
 }
