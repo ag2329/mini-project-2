@@ -61,4 +61,20 @@ class UserTest extends TestCase
 
         }
     }
+
+    public function testInsertionCar(){
+        $name="tesla";
+        $year="2019";
+        $model="model3";
+        DB::table('cars')->insert(
+            ['make' => $name, 'year' => $year,'model'=> $model]
+        );
+        $name = DB::table('cars')->where('make', 'tesla')->value('make');
+        if($name == "tesla"){
+            $this->assertTrue(true);
+
+        }
+
+    }
+
 }
